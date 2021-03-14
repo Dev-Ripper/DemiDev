@@ -11,7 +11,7 @@ for(let i = 0 ; i < allButtons.length; i++){
     } while (bomb1 === bomb2);
 
     allButtons[i].addEventListener("click", function(){
-
+                
         if (i === bomb1 || i === bomb2) {
 
             allButtons[i].innerHTML = "💣";
@@ -23,7 +23,9 @@ for(let i = 0 ; i < allButtons.length; i++){
 
             allButtons[i].innerHTML ="1";
             allButtons[i].style.backgroundColor = "green";
+            allButtons[i].disabled = true;
             count ++;
+            console.log(count);
         }
         
         if (count === 23) {
@@ -34,3 +36,4 @@ for(let i = 0 ; i < allButtons.length; i++){
     });
 } 
 console.log(bomb1, bomb2);
+
